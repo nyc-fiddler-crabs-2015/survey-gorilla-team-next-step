@@ -23,7 +23,7 @@ describe 'POST /authentication/signin' do
       follow_redirect!
       last_request.path.should == "/users/#{user.id}"
    end
-  end
+end
 
   describe 'POST /authentication/register_user' do
     it 'should register a user' do
@@ -31,6 +31,7 @@ describe 'POST /authentication/signin' do
       expect(last_response).to be_redirect
       follow_redirect!
       last_request.path.should == "/users/#{user_id}"
-   end
+    end
+  end
 
 end
